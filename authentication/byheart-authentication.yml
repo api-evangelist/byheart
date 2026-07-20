@@ -1,0 +1,26 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.byheart.com/.well-known/openid-configuration
+docs: https://shopify.dev/docs/api/customer
+note: >-
+  ByHeart's storefront authenticates customers via Shopify's Customer Account
+  API, an OpenID Connect / OAuth 2.0 authorization server hosted by Shopify and
+  advertised under the ByHeart domain. There is no first-party ByHeart API.
+summary:
+  types: [oauth2, openIdConnect]
+  oauth2_flows: [authorizationCode]
+  pkce: S256
+  grant_types: [authorization_code, refresh_token, 'urn:ietf:params:oauth:grant-type:jwt-bearer']
+schemes:
+- name: shopifyCustomerAccountOIDC
+  type: openIdConnect
+  provider: Shopify Customer Account API
+  issuer: https://shopify.com/authentication/59458650296
+  authorization_endpoint: https://shopify.com/authentication/59458650296/oauth/authorize
+  token_endpoint: https://shopify.com/authentication/59458650296/oauth/token
+  end_session_endpoint: https://shopify.com/authentication/59458650296/logout
+  jwks_uri: https://shopify.com/authentication/59458650296/.well-known/jwks.json
+  id_token_signing_alg: [RS256]
+  token_endpoint_auth_methods: [client_secret_basic]
+  code_challenge_methods: [S256]
+  sources: [well-known/byheart-openid-configuration.json]
