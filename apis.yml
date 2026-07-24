@@ -1,8 +1,16 @@
 aid: byheart
 name: ByHeart
-description: 'ByHeart is a company surfaced as a portfolio company of d1-capital and added to the API
-  Evangelist network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: >-
+  ByHeart is a US infant-nutrition company founded in 2016 that makes Whole
+  Nutrition Infant Formula, marketed on the promise of better science, better
+  ingredients, and better quality. It sells direct-to-consumer through a Shopify
+  storefront at byheart.com as well as through retail. The company ran its own
+  clinical program and built its own manufacturing. In November 2025 ByHeart
+  recalled all batches after Clostridium botulinum contamination linked to
+  infant-botulism cases and paused production pending FDA clearance to resume.
+  ByHeart is a portfolio company of D1 Capital. It publishes no first-party
+  developer API; its only machine-discoverable surface is the Shopify Customer
+  Account API (OpenID Connect / OAuth 2.0) advertised under its domain.
 url: https://raw.githubusercontent.com/api-evangelist/byheart/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,12 +18,31 @@ x-backed-by:
 - d1-capital
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
+image: https://www.byheart.com/favicon.ico
 tags:
 - Company
 - Consumer
+- Infant Nutrition
+- Baby Formula
+- Direct-to-Consumer
+- Ecommerce
+- Health
+- Shopify
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -25,3 +52,32 @@ maintainers:
 common:
 - type: Website
   url: https://www.byheart.com
+- type: SignUp
+  url: https://byheart.com/account/login
+- type: Login
+  url: https://byheart.com/account/login
+- type: Support
+  url: https://byheart.com/pages/byheart-faqs
+- type: PrivacyPolicy
+  url: https://byheart.com/pages/privacy-notice
+- type: TermsOfService
+  url: https://byheart.com/pages/terms-and-conditions
+- type: WellKnown
+  url: well-known/byheart-well-known.yml
+- type: Authentication
+  url: authentication/byheart-authentication.yml
+- type: OpenIDConnect
+  url: well-known/byheart-openid-configuration.json
+- type: OAuthScopes
+  url: scopes/byheart-scopes.yml
+- type: Conformance
+  url: conformance/byheart-conformance.yml
+- type: MCPServer
+  url: mcp/byheart-mcp.yml
+- type: DomainSecurity
+  url: security/byheart-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

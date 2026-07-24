@@ -1,0 +1,22 @@
+generated: '2026-07-18'
+method: searched
+source: live probe of https://www.byheart.com/.well-known/*
+host: https://www.byheart.com
+note: >-
+  byheart.com runs on Shopify. The OIDC/OAuth discovery documents below are
+  served under the ByHeart domain but describe Shopify's Customer Account API
+  authorization server for this store (issuer
+  https://shopify.com/authentication/59458650296).
+documents:
+- path: /.well-known/openid-configuration
+  status: 200
+  file: byheart-openid-configuration.json
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  file: byheart-oauth-authorization-server.json
+- path: /.well-known/security.txt
+  status: 301
+- path: /.well-known/api-catalog
+  status: 301
+- path: /.well-known/ai-plugin.json
+  status: 301

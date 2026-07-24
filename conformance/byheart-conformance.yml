@@ -1,0 +1,18 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.byheart.com/.well-known/openid-configuration
+note: >-
+  Standards conformance derived from the OIDC/OAuth discovery document served
+  under the ByHeart domain (Shopify Customer Account API authorization server).
+standards:
+- id: oauth2
+  conforms: true
+  evidence: RFC 8414 authorization-server metadata served at /.well-known/oauth-authorization-server
+- id: oidc
+  conforms: true
+  evidence: OpenID Connect discovery served at /.well-known/openid-configuration; issuer, jwks_uri, id_token RS256
+- id: oauth2-pkce
+  conforms: true
+  evidence: code_challenge_methods_supported includes S256 (RFC 7636)
+- id: rfc9457-problem-details
+  conforms: false

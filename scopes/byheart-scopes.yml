@@ -1,0 +1,31 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.byheart.com/.well-known/openid-configuration
+docs: https://shopify.dev/docs/api/customer
+note: >-
+  OAuth scopes advertised by the Shopify Customer Account API authorization
+  server for the ByHeart store (issuer shopify.com/authentication/59458650296).
+schemes:
+- name: shopifyCustomerAccountOIDC
+  source: well-known/byheart-openid-configuration.json
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://shopify.com/authentication/59458650296/oauth/authorize
+    tokenUrl: https://shopify.com/authentication/59458650296/oauth/token
+scopes:
+- scope: openid
+  description: OpenID Connect authentication; returns an ID token for the customer.
+  flows: [authorizationCode]
+  sources: [well-known/byheart-openid-configuration.json]
+- scope: email
+  description: Access to the customer's email address and email_verified claim.
+  flows: [authorizationCode]
+  sources: [well-known/byheart-openid-configuration.json]
+- scope: customer-account-api:full
+  description: Full access to the Shopify Customer Account API for the signed-in customer (orders, profile, addresses).
+  flows: [authorizationCode]
+  sources: [well-known/byheart-openid-configuration.json]
+- scope: customer-account-mcp-api:full
+  description: Full access to the Shopify Customer Account MCP API surface for the signed-in customer.
+  flows: [authorizationCode]
+  sources: [well-known/byheart-openid-configuration.json]

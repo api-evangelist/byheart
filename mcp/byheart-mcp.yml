@@ -1,0 +1,18 @@
+generated: '2026-07-18'
+method: searched
+status: platform
+source: https://www.byheart.com/.well-known/openid-configuration
+note: >-
+  ByHeart does not publish a first-party MCP server. Its Shopify storefront
+  advertises the scope `customer-account-mcp-api:full` in the Customer Account
+  API OIDC discovery document, meaning a signed-in customer can be granted
+  access to Shopify's platform-provided Customer Account MCP surface for this
+  store. The MCP surface is hosted and governed by Shopify, not ByHeart, and is
+  gated behind the store's OAuth authorization server.
+server:
+  name: shopify-customer-account-mcp
+  provider: Shopify
+  transport: http
+  authorization_server: https://shopify.com/authentication/59458650296
+  scope: customer-account-mcp-api:full
+tools: []
