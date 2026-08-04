@@ -1,6 +1,7 @@
 generated: '2026-07-18'
 method: searched
-status: platform
+status: published
+status_raw: platform
 source: https://www.byheart.com/.well-known/openid-configuration
 note: >-
   ByHeart does not publish a first-party MCP server. Its Shopify storefront
